@@ -26,14 +26,6 @@ agent.addDataSource(createMongooseDataSource(connection, { flattenMode: 'manual'
 
 customizeCollections(agent);
 
-// It might look strange to separate this in a different function, but this is something I need quite often throughout the codebase.
-const setContextToSlug = async (context:  HookBeforeCreateContext<Schema, 'test'> ) => {
-  const slug = `${context.data[0].firstName.toLowerCase()}-${context.data[0].lastName.toLowerCase()}`;
-  const namesake = await context.collection.list({ conditionTree: { field: 'slug', value: slug, operator: 'Equal' }}, [ '_id'])
-  if (namesake.length > 0) {
-    context.data[0].slug = slug;
-  } else context.data[0].slug = slug + 'random_number'
-}
 
 // Expose an HTTP endpoint.
 agent.mountOnStandaloneServer(Number(process.env.APPLICATION_PORT));

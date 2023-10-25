@@ -24,29 +24,9 @@ interface OfficesInterface {
 const officesSchema = new Mongoose.Schema(
   {
     isMain: Boolean,
-    phone: String,
-    fax: String,
-    latlng: {
-      lat: String,
-      lng: String,
-    },
-    address: {
-      street: { type: String, required: true },
-      extraLine: String,
-      municipality: { type: String, required: true },
-      town: String,
-      zip: { type: String, required: true },
-      canton: String,
-      cantonAbbr: String,
-    },
-    postbox: {
-      nr: String,
-      extraLine: String,
-      city: String,
-      zip: String,
-    },
-    lawyers: { type: [Mongoose.Schema.Types.ObjectId], ref: 'lawyers' },
-    firm: { type: Mongoose.Schema.Types.ObjectId, ref: 'firms', required: true },
+    street: { type: String, required: true },
+    municipality: { type: String, required: true },
+    zip: { type: String, required: true },
   },
   {
     timestamps: true,

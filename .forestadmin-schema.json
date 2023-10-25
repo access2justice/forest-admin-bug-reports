@@ -38,380 +38,6 @@
         {
           "defaultValue": null,
           "enums": [],
-          "field": "email",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": true,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "String",
-          "validations": [{"type": "is present", "message": "Field is required"}]
-        },
-        {
-          "defaultValue": null,
-          "enums": [],
-          "field": "extraNameLine",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "String",
-          "validations": []
-        },
-        {
-          "defaultValue": null,
-          "enums": [],
-          "field": "name",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": true,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "String",
-          "validations": [{"type": "is present", "message": "Field is required"}]
-        },
-        {
-          "defaultValue": null,
-          "enums": null,
-          "field": "offices_firm__manyToOne__inverse",
-          "integration": null,
-          "inverseOf": "firm__manyToOne",
-          "isFilterable": false,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": "offices._id",
-          "relationship": "HasMany",
-          "type": ["String"],
-          "validations": []
-        },
-        {
-          "defaultValue": null,
-          "enums": [],
-          "field": "slug",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "String",
-          "validations": []
-        },
-        {
-          "defaultValue": null,
-          "enums": [],
-          "field": "updatedAt",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "Date",
-          "validations": []
-        },
-        {
-          "defaultValue": null,
-          "enums": [],
-          "field": "website",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "String",
-          "validations": []
-        }
-      ],
-      "icon": null,
-      "integration": null,
-      "isReadOnly": false,
-      "isSearchable": true,
-      "isVirtual": false,
-      "name": "firms",
-      "onlyForRelationships": false,
-      "paginationType": "page",
-      "segments": []
-    },
-    {
-      "actions": [],
-      "fields": [
-        {
-          "defaultValue": null,
-          "enums": [],
-          "field": "_id",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": true,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "String",
-          "validations": []
-        },
-        {
-          "defaultValue": "Free",
-          "enums": [],
-          "field": "accountType",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": true,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "String",
-          "validations": [{"type": "is present", "message": "Field is required"}]
-        },
-        {
-          "defaultValue": true,
-          "enums": [],
-          "field": "available",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": true,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "Boolean",
-          "validations": [{"type": "is present", "message": "Field is required"}]
-        },
-        {
-          "defaultValue": null,
-          "enums": [],
-          "field": "awards",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": false,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": false,
-          "isVirtual": false,
-          "reference": null,
-          "type": ["String"],
-          "validations": []
-        },
-        {
-          "defaultValue": null,
-          "enums": [],
-          "field": "billing",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": false,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": false,
-          "isVirtual": false,
-          "reference": null,
-          "type": {
-            "fields": [
-              {
-                "field": "commission",
-                "type": {
-                  "fields": [
-                    {"field": "percentage", "type": "String"},
-                    {"field": "cap", "type": "String"}
-                  ]
-                }
-              },
-              {
-                "field": "subscription",
-                "type": {
-                  "fields": [
-                    {"field": "invoiceChannel", "type": "String"},
-                    {"field": "stripeSubscriptionId", "type": "String"},
-                    {"field": "freeTrial", "type": "Boolean"}
-                  ]
-                }
-              },
-              {"field": "stripeCustomerId", "type": "String"},
-              {"field": "bexioContactId", "type": "Number"}
-            ]
-          },
-          "validations": []
-        },
-        {
-          "defaultValue": null,
-          "enums": [],
-          "field": "createdAt",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": true,
-          "isRequired": false,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "Date",
-          "validations": []
-        },
-        {
-          "defaultValue": null,
-          "enums": [],
-          "field": "education",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": false,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": false,
-          "isVirtual": false,
-          "reference": null,
-          "type": [
-            {
-              "fields": [
-                {
-                  "field": "value",
-                  "type": {
-                    "fields": [
-                      {"field": "title", "type": "String"},
-                      {"field": "university", "type": "String"},
-                      {"field": "date", "type": "String"}
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "validations": []
-        },
-        {
-          "defaultValue": null,
-          "enums": [],
-          "field": "email",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": true,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "String",
-          "validations": [{"type": "is present", "message": "Field is required"}]
-        },
-        {
-          "defaultValue": null,
-          "enums": [],
-          "field": "experience",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": false,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": false,
-          "isVirtual": false,
-          "reference": null,
-          "type": [
-            {
-              "fields": [
-                {
-                  "field": "value",
-                  "type": {
-                    "fields": [
-                      {"field": "from", "type": "String"},
-                      {"field": "to", "type": "String"},
-                      {"field": "function", "type": "String"},
-                      {"field": "office", "type": "String"}
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "validations": []
-        },
-        {
-          "defaultValue": "",
-          "enums": [],
-          "field": "firmFunction",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "String",
-          "validations": []
-        },
-        {
-          "defaultValue": "15",
-          "enums": [],
-          "field": "firstConsultationDuration",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "String",
-          "validations": []
-        },
-        {
-          "defaultValue": "",
-          "enums": [],
-          "field": "firstConsultationPrice",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "String",
-          "validations": []
-        },
-        {
-          "defaultValue": null,
-          "enums": [],
           "field": "firstName",
           "integration": null,
           "inverseOf": null,
@@ -424,132 +50,6 @@
           "reference": null,
           "type": "String",
           "validations": [{"type": "is present", "message": "Field is required"}]
-        },
-        {
-          "defaultValue": null,
-          "enums": [],
-          "field": "gender",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": true,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "String",
-          "validations": [{"type": "is present", "message": "Field is required"}]
-        },
-        {
-          "defaultValue": false,
-          "enums": [],
-          "field": "hasFirstConsultation",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": true,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "Boolean",
-          "validations": [{"type": "is present", "message": "Field is required"}]
-        },
-        {
-          "defaultValue": false,
-          "enums": [],
-          "field": "hasHourlyRate",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": true,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "Boolean",
-          "validations": [{"type": "is present", "message": "Field is required"}]
-        },
-        {
-          "defaultValue": false,
-          "enums": [],
-          "field": "hidden",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": true,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "Boolean",
-          "validations": [{"type": "is present", "message": "Field is required"}]
-        },
-        {
-          "defaultValue": false,
-          "enums": [],
-          "field": "hideAge",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": true,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "Boolean",
-          "validations": [{"type": "is present", "message": "Field is required"}]
-        },
-        {
-          "defaultValue": "",
-          "enums": [],
-          "field": "hourlyRate",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "String",
-          "validations": []
-        },
-        {
-          "defaultValue": null,
-          "enums": [],
-          "field": "languages",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": false,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": false,
-          "isVirtual": false,
-          "reference": null,
-          "type": [
-            {
-              "fields": [
-                {
-                  "field": "value",
-                  "type": {
-                    "fields": [
-                      {"field": "lang", "type": "String"},
-                      {"field": "kind", "type": "String"}
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "validations": []
         },
         {
           "defaultValue": null,
@@ -568,333 +68,19 @@
           "validations": [{"type": "is present", "message": "Field is required"}]
         },
         {
-          "defaultValue": "",
-          "enums": [],
-          "field": "lawyerAdmissionCanton",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "String",
-          "validations": []
-        },
-        {
           "defaultValue": null,
-          "enums": [],
-          "field": "lawyerAdmissionYear",
+          "enums": null,
+          "field": "office__manyToOne",
           "integration": null,
-          "inverseOf": null,
+          "inverseOf": "lawyers_office__manyToOne__inverse",
           "isFilterable": true,
           "isPrimaryKey": false,
           "isReadOnly": false,
           "isRequired": false,
           "isSortable": true,
           "isVirtual": false,
-          "reference": null,
-          "type": "String",
-          "validations": []
-        },
-        {
-          "defaultValue": "",
-          "enums": [],
-          "field": "lawyerRegistryCanton",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "String",
-          "validations": []
-        },
-        {
-          "defaultValue": false,
-          "enums": [],
-          "field": "mediator",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": true,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "Boolean",
-          "validations": [{"type": "is present", "message": "Field is required"}]
-        },
-        {
-          "defaultValue": null,
-          "enums": [],
-          "field": "memberships",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": false,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": false,
-          "isVirtual": false,
-          "reference": null,
-          "type": ["String"],
-          "validations": []
-        },
-        {
-          "defaultValue": "",
-          "enums": [],
-          "field": "phone",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "String",
-          "validations": []
-        },
-        {
-          "defaultValue": "",
-          "enums": [],
-          "field": "poolClaimTemplate",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "String",
-          "validations": []
-        },
-        {
-          "defaultValue": null,
-          "enums": [],
-          "field": "practiceAreas",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": false,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": false,
-          "isVirtual": false,
-          "reference": null,
-          "type": [
-            {
-              "fields": [
-                {
-                  "field": "value",
-                  "type": {
-                    "fields": [
-                      {
-                        "field": "practiceArea",
-                        "type": {
-                          "fields": [
-                            {"field": "link", "type": "String"},
-                            {"field": "display", "type": "String"},
-                            {"field": "_id", "type": "String"}
-                          ]
-                        }
-                      },
-                      {"field": "preference", "type": "Number"}
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "validations": []
-        },
-        {
-          "defaultValue": null,
-          "enums": [],
-          "field": "profileText",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": false,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": false,
-          "isVirtual": false,
-          "reference": null,
-          "type": {
-            "fields": [
-              {"field": "manual", "type": "String"},
-              {"field": "generated", "type": "String"}
-            ]
-          },
-          "validations": []
-        },
-        {
-          "defaultValue": "generated",
-          "enums": [],
-          "field": "profileTextSelection",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": true,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "String",
-          "validations": [{"type": "is present", "message": "Field is required"}]
-        },
-        {
-          "defaultValue": null,
-          "enums": [],
-          "field": "publications",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": false,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": false,
-          "isVirtual": false,
-          "reference": null,
-          "type": [
-            {
-              "fields": [
-                {
-                  "field": "value",
-                  "type": {
-                    "fields": [
-                      {"field": "title", "type": "String"},
-                      {"field": "publication", "type": "String"},
-                      {"field": "link", "type": "String"}
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "validations": []
-        },
-        {
-          "defaultValue": false,
-          "enums": [],
-          "field": "showClientMessageInEmail",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": true,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "Boolean",
-          "validations": [{"type": "is present", "message": "Field is required"}]
-        },
-        {
-          "defaultValue": true,
-          "enums": [],
-          "field": "showContactData",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "Boolean",
-          "validations": []
-        },
-        {
-          "defaultValue": "unclaimed",
-          "enums": [],
-          "field": "signUpStatus",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": true,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "String",
-          "validations": [{"type": "is present", "message": "Field is required"}]
-        },
-        {
-          "defaultValue": null,
-          "enums": [],
-          "field": "slug",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "String",
-          "validations": []
-        },
-        {
-          "defaultValue": null,
-          "enums": [],
-          "field": "specialCertificates",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": false,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": false,
-          "isVirtual": false,
-          "reference": null,
-          "type": ["String"],
-          "validations": []
-        },
-        {
-          "defaultValue": "",
-          "enums": [],
-          "field": "termsOfUseAccepted",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "String",
-          "validations": []
-        },
-        {
-          "defaultValue": "",
-          "enums": [],
-          "field": "title",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
+          "reference": "offices._id",
+          "relationship": "BelongsTo",
           "type": "String",
           "validations": []
         },
@@ -912,22 +98,6 @@
           "isVirtual": false,
           "reference": null,
           "type": "Date",
-          "validations": []
-        },
-        {
-          "defaultValue": "",
-          "enums": [],
-          "field": "yearOfBirth",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "String",
           "validations": []
         }
       ],
@@ -963,32 +133,6 @@
         {
           "defaultValue": null,
           "enums": [],
-          "field": "address",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": false,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": false,
-          "isVirtual": false,
-          "reference": null,
-          "type": {
-            "fields": [
-              {"field": "street", "type": "String"},
-              {"field": "extraLine", "type": "String"},
-              {"field": "municipality", "type": "String"},
-              {"field": "town", "type": "String"},
-              {"field": "zip", "type": "String"},
-              {"field": "canton", "type": "String"},
-              {"field": "cantonAbbr", "type": "String"}
-            ]
-          },
-          "validations": []
-        },
-        {
-          "defaultValue": null,
-          "enums": [],
           "field": "createdAt",
           "integration": null,
           "inverseOf": null,
@@ -1001,39 +145,6 @@
           "reference": null,
           "type": "Date",
           "validations": []
-        },
-        {
-          "defaultValue": null,
-          "enums": [],
-          "field": "fax",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "String",
-          "validations": []
-        },
-        {
-          "defaultValue": null,
-          "enums": null,
-          "field": "firm__manyToOne",
-          "integration": null,
-          "inverseOf": "offices_firm__manyToOne__inverse",
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": true,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": "firms._id",
-          "relationship": "BelongsTo",
-          "type": "String",
-          "validations": [{"type": "is present", "message": "Field is required"}]
         },
         {
           "defaultValue": null,
@@ -1053,264 +164,19 @@
         },
         {
           "defaultValue": null,
-          "enums": [],
-          "field": "latlng",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": false,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": false,
-          "isVirtual": false,
-          "reference": null,
-          "type": {
-            "fields": [{"field": "lat", "type": "String"}, {"field": "lng", "type": "String"}]
-          },
-          "validations": []
-        },
-        {
-          "defaultValue": null,
-          "enums": [],
-          "field": "lawyers",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": false,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": false,
-          "isVirtual": false,
-          "reference": null,
-          "type": ["String"],
-          "validations": []
-        },
-        {
-          "defaultValue": null,
-          "enums": [],
-          "field": "phone",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "String",
-          "validations": []
-        },
-        {
-          "defaultValue": null,
-          "enums": [],
-          "field": "postbox",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": false,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": false,
-          "isVirtual": false,
-          "reference": null,
-          "type": {
-            "fields": [
-              {"field": "nr", "type": "String"},
-              {"field": "extraLine", "type": "String"},
-              {"field": "city", "type": "String"},
-              {"field": "zip", "type": "String"}
-            ]
-          },
-          "validations": []
-        },
-        {
-          "defaultValue": null,
-          "enums": [],
-          "field": "updatedAt",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "Date",
-          "validations": []
-        }
-      ],
-      "icon": null,
-      "integration": null,
-      "isReadOnly": false,
-      "isSearchable": true,
-      "isVirtual": false,
-      "name": "offices",
-      "onlyForRelationships": false,
-      "paginationType": "page",
-      "segments": []
-    },
-    {
-      "actions": [],
-      "fields": [
-        {
-          "defaultValue": null,
-          "enums": [],
-          "field": "_id",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": true,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "String",
-          "validations": []
-        },
-        {
-          "defaultValue": null,
           "enums": null,
-          "field": "address",
+          "field": "lawyers_office__manyToOne__inverse",
           "integration": null,
-          "inverseOf": "parent",
-          "isFilterable": true,
+          "inverseOf": "office__manyToOne",
+          "isFilterable": false,
           "isPrimaryKey": false,
           "isReadOnly": false,
           "isRequired": false,
           "isSortable": true,
           "isVirtual": false,
-          "reference": "test_address._id",
-          "relationship": "HasOne",
-          "type": "String",
-          "validations": []
-        },
-        {
-          "defaultValue": null,
-          "enums": [],
-          "field": "createdAt",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": true,
-          "isRequired": false,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "Date",
-          "validations": []
-        },
-        {
-          "defaultValue": null,
-          "enums": [],
-          "field": "firstName",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "String",
-          "validations": []
-        },
-        {
-          "defaultValue": null,
-          "enums": [],
-          "field": "lastName",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "String",
-          "validations": []
-        },
-        {
-          "defaultValue": null,
-          "enums": [],
-          "field": "slug",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "String",
-          "validations": []
-        },
-        {
-          "defaultValue": null,
-          "enums": [],
-          "field": "updatedAt",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "Date",
-          "validations": []
-        }
-      ],
-      "icon": null,
-      "integration": null,
-      "isReadOnly": false,
-      "isSearchable": true,
-      "isVirtual": false,
-      "name": "test",
-      "onlyForRelationships": false,
-      "paginationType": "page",
-      "segments": []
-    },
-    {
-      "actions": [],
-      "fields": [
-        {
-          "defaultValue": null,
-          "enums": [],
-          "field": "_id",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": true,
-          "isReadOnly": true,
-          "isRequired": false,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "String",
-          "validations": []
-        },
-        {
-          "defaultValue": null,
-          "enums": [],
-          "field": "co",
-          "integration": null,
-          "inverseOf": null,
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "String",
+          "reference": "lawyers._id",
+          "relationship": "HasMany",
+          "type": ["String"],
           "validations": []
         },
         {
@@ -1322,50 +188,49 @@
           "isFilterable": true,
           "isPrimaryKey": false,
           "isReadOnly": false,
-          "isRequired": false,
-          "isSortable": true,
-          "isVirtual": false,
-          "reference": null,
-          "type": "String",
-          "validations": []
-        },
-        {
-          "defaultValue": null,
-          "enums": null,
-          "field": "parent",
-          "integration": null,
-          "inverseOf": "address",
-          "isFilterable": true,
-          "isPrimaryKey": false,
-          "isReadOnly": false,
           "isRequired": true,
           "isSortable": true,
           "isVirtual": false,
-          "reference": "test._id",
-          "relationship": "BelongsTo",
+          "reference": null,
           "type": "String",
           "validations": [{"type": "is present", "message": "Field is required"}]
         },
         {
           "defaultValue": null,
           "enums": [],
-          "field": "postcode",
+          "field": "name",
           "integration": null,
           "inverseOf": null,
-          "isFilterable": true,
+          "isFilterable": false,
           "isPrimaryKey": false,
-          "isReadOnly": false,
+          "isReadOnly": true,
           "isRequired": false,
-          "isSortable": true,
+          "isSortable": false,
           "isVirtual": false,
           "reference": null,
-          "type": "Number",
+          "type": "String",
           "validations": []
         },
         {
           "defaultValue": null,
           "enums": [],
-          "field": "streetNr",
+          "field": "street",
+          "integration": null,
+          "inverseOf": null,
+          "isFilterable": true,
+          "isPrimaryKey": false,
+          "isReadOnly": false,
+          "isRequired": true,
+          "isSortable": true,
+          "isVirtual": false,
+          "reference": null,
+          "type": "String",
+          "validations": [{"type": "is present", "message": "Field is required"}]
+        },
+        {
+          "defaultValue": null,
+          "enums": [],
+          "field": "updatedAt",
           "integration": null,
           "inverseOf": null,
           "isFilterable": true,
@@ -1375,8 +240,24 @@
           "isSortable": true,
           "isVirtual": false,
           "reference": null,
-          "type": "String",
+          "type": "Date",
           "validations": []
+        },
+        {
+          "defaultValue": null,
+          "enums": [],
+          "field": "zip",
+          "integration": null,
+          "inverseOf": null,
+          "isFilterable": true,
+          "isPrimaryKey": false,
+          "isReadOnly": false,
+          "isRequired": true,
+          "isSortable": true,
+          "isVirtual": false,
+          "reference": null,
+          "type": "String",
+          "validations": [{"type": "is present", "message": "Field is required"}]
         }
       ],
       "icon": null,
@@ -1384,7 +265,7 @@
       "isReadOnly": false,
       "isSearchable": true,
       "isVirtual": false,
-      "name": "test_address",
+      "name": "offices",
       "onlyForRelationships": false,
       "paginationType": "page",
       "segments": []
