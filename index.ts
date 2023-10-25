@@ -4,6 +4,7 @@ import 'dotenv/config';
 import { CollectionCustomizer, HookBeforeCreateContext, createAgent } from '@forestadmin/agent';
 import { createMongooseDataSource } from '@forestadmin/datasource-mongoose';
 import connection from './models';
+import { customizeCollections, flattenOptions } from './customizations';
 
 // This object allows to configure your Forest Admin panel
 const agent = createAgent<Schema>({
@@ -21,15 +22,9 @@ const agent = createAgent<Schema>({
 
 // Connect your datasources
 // All options are documented at https://docs.forestadmin.com/developer-guide-agents-nodejs/data-sources/connection
-agent.addDataSource(createMongooseDataSource(connection, { flattenMode: 'auto' }));
+agent.addDataSource(createMongooseDataSource(connection, { flattenMode: 'manual', flattenOptions  }));
 
-agent.customizeCollection('test', (collection: CollectionCustomizer<Schema, 'test'>) => {
-  // Actions are documented here:
-  // https://docs.forestadmin.com/developer-guide-agents-nodejs/agent-customization/actions
-  collection.addHook( 'Before','Create', async (context) => {
-    setContextToSlug(context);
-   });
-});
+customizeCollections(agent);
 
 // It might look strange to separate this in a different function, but this is something I need quite often throughout the codebase.
 const setContextToSlug = async (context:  HookBeforeCreateContext<Schema, 'test'> ) => {
